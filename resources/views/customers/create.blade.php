@@ -27,13 +27,13 @@
         <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Customer Email</label>
             <input type="email" id="email" name="email" value="{{ old('email') }}" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('email') }}</textarea>
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
         </div>
 
         <div>
             <label for="phone" class="block text-sm font-medium text-gray-700">Customer Phone</label>
             <input type="text" id="phone" name="phone" value="{{ old('phone') }}" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('phone') }}</textarea>
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
         </div>
 
         <div>

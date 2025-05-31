@@ -33,9 +33,9 @@ class ProductController extends Controller
     {
         // Validasi data yang dikirimkan dari form
         $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price' => 'required|numeric|min:0',
+            'name' => ['required', 'string', 'max:255', 'not_regex:/-/'],
+            'description' => ['required', 'string', 'not_regex:/-/'],
+            'price' => 'required|numeric|min:1',
             'category_id' => 'required|exists:categories,id',
         ]);
 
@@ -64,9 +64,9 @@ class ProductController extends Controller
     {
         // Validasi data dari form
         $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price' => 'required|numeric|min:0',
+            'name' => ['required', 'string', 'max:255', 'not_regex:/-/'],
+            'description' => ['required', 'string', 'not_regex:/-/'],
+            'price' => 'required|numeric|min:1',
             'category_id' => 'required|exists:categories,id',
         ]);
 

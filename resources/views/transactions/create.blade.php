@@ -53,7 +53,7 @@
         <div>
             <label for="transaction_date" class="block text-sm font-medium text-gray-700">Transaction Date</label>
             <input type="date" id="transaction_date" name="transaction_date" value="{{ old('transaction_date') }}" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('transaction_date') }}</textarea>
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
         </div>
 
         <div class="flex justify-end">

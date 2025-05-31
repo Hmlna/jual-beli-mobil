@@ -29,9 +29,9 @@ class CustomerController extends Controller
     {
         // Validasi input dari form
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255', 'not_regex:/-/'],
             'email' => 'required|email|unique:customers,email',
-            'phone' => 'required|string|max:15',
+            'phone' => ['required', 'regex:/^(\+62|62|08)[0-9]{8,13}$/'],
             'address' => 'required|string',
         ]);
 
@@ -57,9 +57,9 @@ class CustomerController extends Controller
     {
         // Validasi input dari form
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255', 'not_regex:/-/'],
             'email' => 'required|email|unique:customers,email,' . $id,
-            'phone' => 'required|string|max:15',
+           'phone' => ['required', 'regex:/^(\+62|62|08)[0-9]{8,13}$/'],
             'address' => 'required|string',
         ]);
 

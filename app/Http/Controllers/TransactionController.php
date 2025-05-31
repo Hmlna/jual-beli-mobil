@@ -39,7 +39,7 @@ class TransactionController extends Controller
             'product_id' => 'required|exists:products,id',
             // 'total_price' => 'required|numeric|min:0',
             'quantity' => 'required|integer|min:1',
-            'transaction_date' => 'required|date',
+            'transaction_date' => 'required|date|after_or_equal:today',
         ]);
         
         $product = Product::findOrFail($request->product_id);
@@ -82,7 +82,7 @@ class TransactionController extends Controller
             'product_id' => 'required|exists:products,id',
             // 'total_price' => 'required|numeric|min:0',
             'quantity' => 'required|integer|min:1',
-            'transaction_date' => 'required|date',
+            'transaction_date' => 'required|date|after_or_equal:today',
         ]);
 
         // Cari transaksi berdasarkan ID

@@ -21,7 +21,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255', 'not_regex:/-/'],
             'description' => 'nullable|string',
         ]);
 
@@ -38,7 +38,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255', 'not_regex:/-/'],
             'description' => 'nullable|string',
         ]);
 
